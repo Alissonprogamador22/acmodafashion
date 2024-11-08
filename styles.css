@@ -1,0 +1,147 @@
+/* Definindo as cores principais */
+:root {
+    --lilas-principal: #C6A3D2;
+    --branco-puro: #FFFFFF;
+    --lavanda-claro: #E8DFF1;
+    --roxo-escuro: #5D3A6D;
+    --cinza-neutro: #F3F3F3;
+}
+
+/* Definindo as fontes principais */
+:root {
+    --fonte-principal: 'Playfair Display', serif;
+    --fonte-secundaria: "Roboto", sans-serif;
+}
+
+/* Resetando margens e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--branco-puro);
+    color: var(--roxo-escuro);
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    font-family: var(--fonte-principal);
+    background-color: #5D3A6D;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Estilo para o menu de navegação */
+nav a {
+    color: #E8DFF1;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--lilas-principal);
+}
+
+/* Estilo para o banner principal */
+.banner {
+    background-color: var(--lilas-principal);
+    color: var(--branco-puro);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.banner h2 {
+    font-size: 1.5rem;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.banner button {
+    background-color: var(--roxo-escuro);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px;
+    font-family: var(--fonte-secundaria);
+}
+
+.banner button:hover {
+    background-color: var(--cinza-neutro);
+    color: #5D3A6D;
+}
+
+/* Estilo para a seção de produtos */
+.destaques {
+    padding: 2em;
+    text-align: center;
+}
+
+.destaques h3 {
+    font-size: 1.2rem;
+    color: var(--roxo-escuro);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.produto {
+    display: inline-block;
+    width: 150px;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.produto img {
+    width: 100%;
+    height: auto; /* Garante a proporção da imagem */
+    max-height: auto; /* Limita o tamanho máximo da imagem */
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.produto:hover img {
+    transform: scale(1.4);
+    transform-origin: center;
+    z-index: 2;
+}
+
+.textodoproduto p {
+    font-size: var(--fonte-principal);
+    color: aqua;
+}
+
+/* Ajustes na seção de produtos para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajuste nos produtos */
+    .produto {
+        width: 100%;
+        margin: 20px 0; /* Aumentando o espaçamento entre os produtos */
+    }
+
+    .produto img {
+        max-width: 100%;
+        height: auto;
+    }
+}
